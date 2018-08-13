@@ -11,27 +11,35 @@
         친구 / 쪽지 / 알림
       </div>
       <div id="login-tab">
-        <div v-if="LoginStatus === false">
-          <router-link to="login">Login</router-link>
+        <div v-if="nickName" @click="logout()">
+          로그아웃
         </div>
-        <div v-if="LoginStatus === true">
-          <router-link to="logout">로그아웃</router-link>
+        <div v-else>
+          <router-link to="login">로그인</router-link>
         </div>
       </div>
       <div id="game-start-tab">
-        <router-link to="roomlist">Start</router-link>
+        <router-link to="roomlist">게임하기</router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex';
+import { logout } from '../service/user';
+
 export default {
   name: 'Nav',
-  data () {
-    return {
-      LoginStatus: false
-    };
+  computed: {
+    ...mapState([
+      'nickName'
+    ])
+  },
+  methods: {
+    logout () {
+      logout();
+    }
   }
 };
 </script>
@@ -46,23 +54,16 @@ export default {
   height: 55px;
   z-index: 1;
 }
-
-#main-tab {
-}
-
 #logo-tab, #social-tab, #login-tab, #game-start-tab {
   display: inline-block;
   margin-left: 10px;
 }
-
 #logo-tab:hover {
   color: #61dafb;
 }
-
 #social-tab {
   margin-left: 40%;
 }
-
 #login-tab {
   background-color: gray;
   padding: 5px;
@@ -72,7 +73,6 @@ export default {
   padding-bottom: 10px;
   padding-top:10px;
 }
-
 #game-start-tab {
   background-color: gray;
   padding: 5px;

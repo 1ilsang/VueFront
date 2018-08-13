@@ -2,7 +2,7 @@
   <div id="app">
     <Modal v-if="modalToggle"></Modal>
     <Nav/>
-    <SubNav></SubNav>
+    <SubNav/>
     <router-view/>
     <Footer></Footer>
   </div>
@@ -10,22 +10,22 @@
 
 <script>
 import Nav from './components/Nav';
-import Footer from './components/Footer';
 import Modal from './components/TetrisModal';
 import SubNav from './components/SubNav';
 
 export default {
   name: 'App',
-  data () {
-    return {
-      modalToggle: false
-    };
-  },
   components: {
     Nav,
-    Footer,
+    Footer: () => import('./components/Footer'),
     Modal,
     SubNav
+  },
+  data () {
+    return {
+      modalToggle: false,
+      routerKey: false
+    };
   },
   created () {
     this.$EventBus.$on('close', () => {

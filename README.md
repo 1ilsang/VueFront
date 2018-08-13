@@ -23,6 +23,9 @@
   - [Spring 네이버 로그인 연동하기 + JWT 토큰 발급 후 Vue 로 리다이렉트](http://1ilsang.blog.me/221336542296)
 - 2018-08-12
   - [ESLint Vue-Standard 에 세미콜론 정책 적용](http://1ilsang.blog.me/221337351543)
+- 2018-08-13
+  - [Vuex 적용하기 + Rotuer 에서 접근 권한 체크](http://1ilsang.blog.me/221338087396)
+
 ## Build Setup
 
 ``` bash

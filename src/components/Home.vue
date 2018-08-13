@@ -21,9 +21,6 @@ export default {
 #container {
   width: 100%;
 }
-#first-list, #second-list, #third-list {
-
-}
 .fade-img{
   animation: fadeImg 1.5s;
 }
@@ -42,5 +39,4 @@ img{
   width: 100%;
   display:block;
 }
-
 </style>

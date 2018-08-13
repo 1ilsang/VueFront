@@ -1,7 +1,7 @@
 <template>
   <div id="container">
     Hello World!<br>
-    You can only do it this way. <p></p>
+    다음 서비스는 로그인이 필요합니다. <p></p><br>
     <div>
       <a :href=naverLoginURL><img src='../assets/naver_login.png'/></a>
     </div>

@@ -22,6 +22,7 @@ export default {
         event.preventDefault();
       }
     };
+    // TODO https://kr.vuejs.org/v2/guide/transitions.html 리스트 무작위 섞기
   }
 };
 </script>

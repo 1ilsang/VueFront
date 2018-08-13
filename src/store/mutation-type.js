@@ -1,0 +1,3 @@
+export const SETACCESSTOKEN = 'SETACCESSTOKEN';
+export const SETNICKNAME = 'SETNICKNAME';
+export const LOGOUT = 'LOGOUT';
